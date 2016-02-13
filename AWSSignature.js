@@ -19,23 +19,15 @@ class AWSSignature {
 
 	_reconstructQueryString(queryString) {
 		let arr = queryString.split('&'); // split query to array
-		let arr2 = arr.map((value) => { // put them in key value pairs
-			return {
-				'key': value.split('=')[0],
-				'value': value.split('=')[1]
-			};
-		}, this);
-		let arr3 = arr2.sort((a,b) => { // sort by key
-			if (a.key > b.key) {
+		let arr2 = arr.sort((a,b) => { // sort by key
+			if (a.split('=')[0] > b.split('=')[0]) {
 				return 1;
 			} else {
 				return -1;
 			}
 		});
 
-		return arr3.map((q) => {
-			return `${q.key}=${q.value}`
-		}).join('&');
+		return arr2.join('&');
 	}
 
 	_stringToSign() {
