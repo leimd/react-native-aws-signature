@@ -25,6 +25,7 @@
   "dependencies": {
     "crypto-browserify": "^3.11.0",
     "jasmine": "^2.4.1",
+    "lodash": "^4.3.0",
     "moment": "^2.11.2"
   }
 }
