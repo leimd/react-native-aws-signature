@@ -31,6 +31,7 @@ var options = {
 };
 awsSignature.setParams(options);
 var signature = awsSignature.getSignature();
+var authorization = awsSignature.getAuthorizationHeader();
 ```
 
 ##Workflow
@@ -58,9 +59,20 @@ The datetime string passed with date header or X-Amz-Date has to be Amazon style
 For example `awsSignature._formatDateTime('2015-02-09T10:00:00Z')` will return `20150209T100000Z` which is accecptable as `X-Amz-Date`.
 * this method might be moved to a util class once this project expands its scope so don't really count on using it*
 
+##getSignature vs getAuthorizationHeader
+once you did `setParams`, you could either use `getSignature` or `getAuthorizationHeader` to get the signature, the difference is that getAuthorizationHeader will return something like the following so that you can use it in the following steps.
+``` javascript
+{
+Authorization: 'AWS4-HMAC-SHA256 Credential=AKIDEXAMPLE/20150830/us-east-1/iam/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=5d672d79c15b13162d9279b0855cfba6789a8edb4c82c400e06b5924a6f2b5d7'
+}
+```
+
+This corresponds to [Step4](http://docs.aws.amazon.com/general/latest/gr/sigv4-add-signature-to-request.html) of the documentation online.
+
+
 ## Credentials
 The minials requried credentail object looks like this:
-```
+```javascript
 {
 	SecretKey: 'wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY',
 	AccessKeyId: 'sdfsdfsdfsdfsdfsdf'
