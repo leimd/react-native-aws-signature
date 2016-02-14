@@ -21,7 +21,7 @@ var options = {
     method: 'get',
     service: 'service',
     headers: {
-        'X-Amz-Date': '20150830T123600Z',
+        'X-Amz-Date': '20150209T123600Z',
         'host': 'example.amazonaws.com'
     },
 	region: 'us-east-1',
@@ -50,6 +50,11 @@ var signature = awsSignature.getSignature();
 |credentials| credentails object returned by coginto##GetCredentialsForIdentity, more on this later|
 
 for headers, `host` and (`date` or `X-Amz-Date`) is required, other wise an exception will raise.
+
+The datetime string passed with date header or X-Amz-Date has to be Amazon styled ISO 8601 strings like the one provided above, you can get one by calling 
+`AWSSignature#_formatDateTime` and pass in an ISO 8601 string as the parameter.
+
+For example `awsSignature('2015-02-09T10:00:00Z')` will return `20150209T100000Z` which is accecptable as `X-Amz-Date`.
 
 ## Credentials
 The minials requried credentail object looks like this:
