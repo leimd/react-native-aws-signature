@@ -14,7 +14,8 @@ This is the first part if you want to make any signed calls to AWS.
 var AWSSignature = require('react-native-aws-signature');
 var awsSignature = new AWSSignature();
 let credentials = {
-	SecretKey: 'wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY'
+	SecretKey: 'wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY',
+	AccessKeyId: 'sdfsdfsdfsdfsdfsdf'
 };
 var options = {
 	path: '/?Param2=value2&Param1=value1',
@@ -61,11 +62,12 @@ For example `awsSignature._formatDateTime('2015-02-09T10:00:00Z')` will return `
 The minials requried credentail object looks like this:
 ```
 {
-	SecretKey: 'wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY'
+	SecretKey: 'wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY',
+	AccessKeyId: 'sdfsdfsdfsdfsdfsdf'
 };
 ```
 
-The only required key is SecretKey that you get from coginto##GetCredentialsForIdentity or somewhere else.
+The required keys are `SecretKey` and `AccessKeyId`that you get from coginto##GetCredentialsForIdentity or somewhere else.
 
 ## running test
 once you cloned the git repo, do `npn install` first to install all the dependencies,
