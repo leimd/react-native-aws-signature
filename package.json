@@ -1,6 +1,6 @@
 {
   "name": "react-native-aws-signature",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "generate aws signature v4 for react-native",
   "main": "AWSSignature.js",
   "scripts": {
