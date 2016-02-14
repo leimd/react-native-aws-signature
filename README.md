@@ -54,7 +54,8 @@ for headers, `host` and (`date` or `X-Amz-Date`) is required, other wise an exce
 The datetime string passed with date header or X-Amz-Date has to be Amazon styled ISO 8601 strings like the one provided above, you can get one by calling 
 `AWSSignature#_formatDateTime` and pass in an ISO 8601 string as the parameter.
 
-For example `awsSignature('2015-02-09T10:00:00Z')` will return `20150209T100000Z` which is accecptable as `X-Amz-Date`.
+For example `awsSignature._formatDateTime('2015-02-09T10:00:00Z')` will return `20150209T100000Z` which is accecptable as `X-Amz-Date`.
+* this method might be moved to a util class once this project expands its scope so don't really count on using it*
 
 ## Credentials
 The minials requried credentail object looks like this:
