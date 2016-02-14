@@ -94,6 +94,9 @@ describe ("AWSSignature", () => {
 	});
 
 	describe("When tested using Sample provided on AWS website", () => {
+		let credentials = {
+			SecretKey: 'wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY'
+		};
 		var options = {
 			path: '/?Param2=value2&Param1=value1',
 			method: 'get',
@@ -103,7 +106,8 @@ describe ("AWSSignature", () => {
 				'host': 'example.amazonaws.com'
 			},
 			region: 'us-east-1',
-			body: ''
+			body: '',
+			credentials
 		};
 
 		var secretKey = 'wJalrXUtnFEMI/K7MDENG+bPxRfiCYEXAMPLEKEY';
