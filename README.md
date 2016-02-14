@@ -1,4 +1,4 @@
-# AWSSignature
+# react-native-aws-signature
 ### helps you generate signature for aws request for React-Native applications (or other js applications )
 [![NPM](https://nodei.co/npm/react-native-aws-signature.png)](https://nodei.co/npm/react-native-aws-signature/)
 
