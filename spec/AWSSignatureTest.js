@@ -1,7 +1,6 @@
 "use strict";
 describe ("AWSSignature", () => {
 	var AWSSignature = require("../lib/AWSSignature");
-	var _ = require("lodash");
 	var moment = require("moment");
 	var signature;
 	beforeEach(() => {
