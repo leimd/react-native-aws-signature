@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/leimd/AWSSignature#readme",
   "dependencies": {
-    "crypto-browserify": "^3.11.0",
     "crypto-js": "^3.1.6",
     "jasmine": "^2.4.1",
     "moment": "^2.11.2"
