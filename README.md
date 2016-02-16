@@ -2,6 +2,10 @@
 ### helps you generate signature for aws request for React-Native applications (or other js applications )
 [![NPM](https://nodei.co/npm/react-native-aws-signature.png)](https://nodei.co/npm/react-native-aws-signature/)
 
+[![Code Climate](https://codeclimate.com/github/leimd/react-native-aws-signature/badges/gpa.svg)](https://codeclimate.com/github/leimd/react-native-aws-signature)
+[![Test Coverage](https://codeclimate.com/github/leimd/react-native-aws-signature/badges/coverage.svg)](https://codeclimate.com/github/leimd/react-native-aws-signature/coverage)
+![CI Status](https://travis-ci.org/leimd/react-native-aws-signature.svg?branch=master)
+
 library to generate AWS signaure V4 for React Native application because react-native's javascript runtime doesn't support running aws-sdk-js.
 This is the first part if you want to make any signed calls to AWS.
 
