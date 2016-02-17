@@ -1,5 +1,4 @@
 node_modules/
 coverage/
->>>>>>> f312930... added coverage to travis
 *.swp
 *.swo
