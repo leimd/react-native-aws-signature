@@ -1,11 +1,11 @@
 {
   "name": "react-native-aws-signature",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "generate aws signature v4 for react-native",
   "main": "./lib/AWSSignature.js",
   "scripts": {
     "test": "jasmine",
-	"cover": "istanbul cover jasmine"
+    "cover": "istanbul cover jasmine"
   },
   "repository": {
     "type": "git",
